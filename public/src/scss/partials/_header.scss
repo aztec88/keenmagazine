@@ -1,0 +1,109 @@
+.logo{
+    text-align: center;
+    img{
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+}
+.header{
+    text-align: center;
+    .main_menu{
+        display: inline-block;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid $font_color_second;
+        li{
+            &:first-child{
+                a{
+                    padding-left: 0;
+                }
+            } 
+            &:last-child{
+                a{
+                    padding-right: 0;
+                }
+            }
+            float: left;
+            list-style: none;
+            
+            a{
+                font-family: Miller-Bold;
+                font-size: 18px;
+                padding: 10px 15px;
+                color: $font_color_third;
+                text-decoration: none;
+                text-transform: uppercase;
+                &:hover{
+                    color: $font_color_main;
+                    text-decoration: none;
+                }
+                @media (max-width:1000px){
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.header_mob{
+    transition: all ease-in 0.3s;
+    display: none;
+    .mob{
+        opacity: 0;
+        z-index: 10;
+        transition: all ease-in 0.3s;
+        width: 270px;
+        position: fixed;
+        top: 0;
+        right: -270px;
+        height: 100%;
+        background: white;
+        border-left: 5px $font_color_main solid;
+        .social_mob{
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+        }
+    }
+    #mob_hamburger{
+        float: right;
+        margin-top: 22px;
+        position: relative;
+        z-index: 15;
+    }
+    .mob_logo{
+        margin: 10px 0;
+    }
+    .mob_menu{
+        margin-top: 100px;
+        padding: 0;
+        text-align: center;
+        li{
+            display: block;
+            list-style: none;
+            padding: 5px 0;
+            width: 100%;
+            a{
+                width: 100%;
+                font-size: 16px;
+                color: $font_color_main;
+                text-decoration: none!important;
+            }
+        }
+    }
+}
+@media (max-width: 768px){
+    .header{
+        display: none;
+    }
+    .header_mob{
+        display: block;
+    }
+    .top_menu{
+        border-bottom: 2px solid $font_color_third;
+    }
+}
+.mob_menu_active{
+    transition: all ease-in 0.3s;
+    right: 0!important;
+    opacity: 1!important;
+}

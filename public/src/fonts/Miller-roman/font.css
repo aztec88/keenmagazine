@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MillerBanner-Roman';
+  src: url('MillerBanner-Roman.eot');
+  src: url('MillerBanner-Roman.woff2') format('woff2'),
+       url('MillerBanner-Roman.woff') format('woff'),
+       url('MillerBanner-Roman.ttf') format('truetype'),
+       url('MillerBanner-Roman.svg#MillerBanner-Roman') format('svg'),
+       url('MillerBanner-Roman.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
