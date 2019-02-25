@@ -11,7 +11,7 @@
 			</ul>
 		</div>
 		<div class="copyright">
-			<p>copyright © 2018</p>
+			<p>copyright © <?php echo date("Y"); ?></p>
 		</div>
 	</div>
 
