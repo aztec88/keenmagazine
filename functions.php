@@ -223,4 +223,4 @@ function get_excerpt($limit, $source = null){
 # ---------------------------------------------------
 # NEWS TUMBNAILS
 # ---------------------------------------------------
-add_image_size( 'news-size', 900, 450, array( 'center', 'center' ) ); // 220 pixels wide by 180 pixels tall, hard crop mode
+add_image_size( 'news-size', 1000, 500, array( 'center', 'center' ) ); // 220 pixels wide by 180 pixels tall, hard crop mode

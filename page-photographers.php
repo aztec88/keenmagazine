@@ -5,6 +5,7 @@
  */
 
 get_header(); 
+$page_listing_num = get_post_meta( get_the_id(), 'page_listing_number', true );
 ?>
 
 <!-- PHOTOGRAPHERS -->
@@ -25,7 +26,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $news= new WP_Query(array(
     'post_type'=>'photographers',
-    'posts_per_page' => 8,
+    'posts_per_page' => $page_listing_num,
     'paged' => $paged,
 ));
 $i=0;

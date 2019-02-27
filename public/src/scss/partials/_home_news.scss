@@ -37,7 +37,10 @@
     .blog_listed_single{
         padding-top: 15px;
         padding-bottom: 15px;
-        position: relative;
+        
+        @media(min-width:992px){
+            position: relative;
+        }
         a{
             vertical-align: middle;
             text-decoration: none!important;
@@ -46,10 +49,12 @@
                 padding: 0 0 0 15px;
                 color: $font_color_second;
                 text-transform: uppercase;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translate(0, -50%);
+                @media(min-width:992px){
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
                 &:hover{
                     color: $font_color_third;
                 }
@@ -91,4 +96,24 @@
 }
 .sidepanel_banner{
     margin-bottom: 60px;
+    // @media (max-width:991px){
+    //     display: none;
+    // }
+}
+.side_panel{
+    @media (max-width:991px){
+        display: none;
+    }
+}
+.news_listed{
+    .blog_section_wrapper{
+        @media (min-width:992px){
+            display: none;
+        }
+        .blog_listed_single{
+            h5{
+                padding: 10px 0 0 0;
+            }
+        }
+    }
 }
