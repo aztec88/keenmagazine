@@ -1,5 +1,11 @@
 .cover_image{
     margin-bottom: 60px;
+    @media(max-width: 640px){
+        object-fit: cover;
+        height: 150px;
+    }
+    
+
 }
 .news_single{
     a{
