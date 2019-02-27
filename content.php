@@ -54,7 +54,7 @@ $j=0;
         <h3>
 			Latest from <?php 
 			if ($type == 'post'){
-				echo 'stories';
+				echo 'news';
 			}
 			else{
 				echo $type;
