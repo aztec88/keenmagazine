@@ -62,9 +62,9 @@ function return_ids($post_type, $limit){
                     <?php the_post_thumbnail('news-size', array('class' => 'img-responsive')); ?>
                 </a>
                 <a href="<?php the_permalink(); ?>">
-                    <h1>
+                    <h2>
                         <?php the_title(); ?>
-                    </h1>
+                    </h2>
                     
                 </a>
                 <p><?= get_excerpt(300); ?></p>
