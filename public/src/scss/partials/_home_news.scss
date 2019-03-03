@@ -1,8 +1,13 @@
 .cover_image{
     margin-bottom: 60px;
+    width: 100%;
     @media(max-width: 640px){
         object-fit: cover;
         height: 150px;
+    }
+    @media(min-width: 2001px){
+        object-fit: cover;
+        height: 550px;
     }
     
 
