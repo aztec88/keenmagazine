@@ -60,8 +60,7 @@ function return_ids($post_type, $limit){
             
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail('news-size', array('class' => 'img-responsive')); ?>
-                </a>
-                <a href="<?php the_permalink(); ?>">
+                
                     <h2>
                         <?php the_title(); ?>
                     </h2>
