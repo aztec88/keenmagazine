@@ -188,3 +188,17 @@
         font-size: 60px;
     }
 }
+
+.all_news_listed{
+    .video_link{
+        a{
+            text-decoration: none;
+            img{
+                -webkit-filter: grayscale(100%)!important;
+                -moz-filter: grayscale(100%)!important;
+                filter: grayscale(100%)!important;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}

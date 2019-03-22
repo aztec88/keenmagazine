@@ -33,14 +33,12 @@ $news= new WP_Query(array(
 $i=0;
 if($news->have_posts()) :
     while($news->have_posts())  : $news->the_post();?>
-   <div class="post_listed col-lg-6 col-sm-6 col-xs-12">
-   <div>
+   <div class="post_listed news_post_listed col-lg-6 col-sm-6 col-xs-12">
        <a href="<?php the_permalink(); ?>">
-           <div class="video_link">
+           
                <?php the_post_thumbnail('news-size', array('class' => 'img-responsive')); ?>
-           </div>
-       </a>
-       <a href="<?php the_permalink(); ?>">
+           
+       
            <h4>
                <?php the_title(); ?>
            </h4>
@@ -59,7 +57,6 @@ if($news->have_posts()) :
                     }
                 ?>
        </a>
-   </div>
 </div>
 <?php
  $i++;

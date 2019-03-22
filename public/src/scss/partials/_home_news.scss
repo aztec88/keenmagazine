@@ -1,13 +1,13 @@
 .cover_image{
     margin-bottom: 60px;
     width: 100%;
-    @media(max-width: 640px){
-        object-fit: cover;
-        height: 150px;
-    }
+    // @media(max-width: 640px){
+        // object-fit: cover;
+        // height: 130px;
+    // }
     @media(min-width: 2001px){
         object-fit: cover;
-        height: 550px;
+        height: 650px;
     }
     
 
@@ -145,4 +145,27 @@
             }
         }
     }
+}
+
+.news_post_listed{
+    a{
+        transition: all 0.5s ease;
+        img{
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+        
+        &:hover{
+            img{
+                -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                -moz-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+            h4{
+                color: $font_color_third;
+            }
+        }
+    } 
 }
