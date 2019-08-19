@@ -224,3 +224,13 @@ function get_excerpt($limit, $source = null){
 # NEWS TUMBNAILS
 # ---------------------------------------------------
 add_image_size( 'news-size', 1000, 500, array( 'center', 'center' ) ); // 220 pixels wide by 180 pixels tall, hard crop mode
+
+
+# ---------------------------------------------------
+# WOOCOMMERCE ENABLE
+# ---------------------------------------------------
+add_action('after_setup_theme', 'woocommerce_support');
+
+function woocommerce_support(){
+	add_theme_support('woocommerce');
+}

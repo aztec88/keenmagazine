@@ -1,0 +1,40 @@
+.woocommerce-billing-fields, .woocommerce-shipping-fields{
+    font-family: Miller!important;
+    input {
+        height: 33px;
+        border: 1px solid #eaeaea;
+        border-radius: 2px;
+        box-shadow: none;
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding-left: 5px;
+    }
+    select{
+        background-color: #fff;
+        border: 1px solid #eaeaea!important;
+        border-radius: 2px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: block;
+        height: 33px;
+        text-align: left!important;
+    }
+    label{
+        margin-top: 25px;
+        text-align: left;
+        font-family: Miller;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.4!important;
+        letter-spacing: 2px;
+    }
+    h3{
+        text-align: left;
+        font-family: Miller;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4!important;
+        letter-spacing: 2px;
+    }
+}
+
