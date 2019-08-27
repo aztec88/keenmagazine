@@ -181,12 +181,18 @@
     color: orange;
   }
 
+  .quantity .qty {
+    width: 5.631em;
+    text-align: center;
+  }
+
   .variations {
     .label {
       display: block;
       text-align: left;
     }
   }
+
   .woocommerce-variation-price span.price{
     color: $font_color_third!important;
     font-size: 2em!important;
@@ -203,7 +209,7 @@
     padding: 10px 0 10px 0;
     color: orange;
   }
-  .add_to_cart_button, .product_type_grouped{
+  .add_to_cart_button, #place_order, .product_type_grouped{
     background-color: $font_color_second!important;
     height: 2.47em!important;
     min-width: 170px!important;
