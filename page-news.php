@@ -1,14 +1,15 @@
 
 <?php 
 /*
- * Template Name: EDITORIAL ALL
+ * Template Name: NEWS
  */
 
 get_header(); 
 $page_listing_num = get_post_meta( get_the_id(), 'page_listing_number', true );
+
 ?>
 
-<!-- EDITORIAL -->
+<!-- News -->
 <div class="container">
     <div class="row">
         <div class="section_title main_title">
@@ -25,23 +26,23 @@ $page_listing_num = get_post_meta( get_the_id(), 'page_listing_number', true );
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 $news= new WP_Query(array(
-    'post_type'=>'editorial',
+    'post_type'=>'post',
     'posts_per_page' => $page_listing_num,
     'paged' => $paged,
 ));
 $i=0;
 if($news->have_posts()) :
     while($news->have_posts())  : $news->the_post();?>
-    <div class="post_listed col-lg-3 col-sm-3  col-xs-6">
-    <div>
-        <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?>
-        </a>
-        <a href="<?php the_permalink(); ?>">
-            <h4>
-                <?php the_title(); ?>
-            </h4>
-            <?php 
+   <div class="post_listed news_post_listed col-lg-6 col-sm-6 col-xs-12">
+       <a href="<?php the_permalink(); ?>">
+           
+               <?php the_post_thumbnail('news-size', array('class' => 'img-responsive')); ?>
+           
+       
+           <h4>
+               <?php the_title(); ?>
+           </h4>
+           <?php 
                     $id = get_the_ID(); 
                     $author = get_post_meta($id, 'author', true);
                     
@@ -55,9 +56,7 @@ if($news->have_posts()) :
                     // do nothing; 
                     }
                 ?>
-            
-        </a>
-    </div>
+       </a>
 </div>
 <?php
  $i++;
@@ -98,6 +97,6 @@ if($news->have_posts()) :
 
 </div>
 </div>
-<!-- END EDOTORIAL -->
+<!-- END VIDEOS -->
 
 <?php get_footer(); ?>

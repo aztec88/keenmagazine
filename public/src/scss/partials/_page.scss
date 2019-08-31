@@ -31,6 +31,17 @@
         color: $font_color_third;
         margin: 0 10px;
     }
+    @media(max-width:768px){
+        font-size: 16px;
+        .current{
+            width: 37px;
+            height: 37px;
+            padding-top: 4px;
+        }
+        .page-numbers{
+            margin: 0 7px;
+        }
+    }
 }
 .all_post_listed{
     .clearfix{

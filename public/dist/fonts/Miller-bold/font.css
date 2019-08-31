@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MillerBanner-Semibold';
+  src: url('MillerBanner-Semibold.eot');
+  src: url('MillerBanner-Semibold.woff2') format('woff2'),
+       url('MillerBanner-Semibold.woff') format('woff'),
+       url('MillerBanner-Semibold.ttf') format('truetype'),
+       url('MillerBanner-Semibold.svg#MillerBanner-Semibold') format('svg'),
+       url('MillerBanner-Semibold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+

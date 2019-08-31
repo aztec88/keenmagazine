@@ -167,6 +167,8 @@ function is_post_type($type){
     return false;
 }
 
+
+
 /*
 	==========================================
 	 Include Walker file for custom menu
@@ -174,9 +176,12 @@ function is_post_type($type){
 */
 require get_template_directory() . '/inc/walker.php';
 
+
+
 # ---------------------------------------------------
 # REMOVE SCREEN READER TEXT FROM POST PAGINATION
 # ---------------------------------------------------
+
 function sanitize_pagination($content) {
     // Remove h2 tag
     $content = preg_replace('#<h2.*?>(.*?)<\/h2>#si', '', $content);
@@ -185,6 +190,8 @@ function sanitize_pagination($content) {
  
 add_action('navigation_markup_template', 'sanitize_pagination');
 
+
+
 # ---------------------------------------------------
 # UPLOAD LIMIT
 # ---------------------------------------------------
@@ -192,3 +199,28 @@ add_action('navigation_markup_template', 'sanitize_pagination');
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
+
+
+
+# ---------------------------------------------------
+# EXERPT FOR HOME WITH NEWS
+# ---------------------------------------------------
+
+function get_excerpt($limit, $source = null){
+
+	$excerpt = $source == "content" ? get_the_content() : get_the_excerpt();
+	$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+	$excerpt = strip_shortcodes($excerpt);
+	$excerpt = strip_tags($excerpt);
+	$excerpt = substr($excerpt, 0, $limit);
+	$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+	$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+	$excerpt = $excerpt.'...';
+	return $excerpt;
+}
+
+
+# ---------------------------------------------------
+# NEWS TUMBNAILS
+# ---------------------------------------------------
+add_image_size( 'news-size', 1000, 500, array( 'center', 'center' ) ); // 220 pixels wide by 180 pixels tall, hard crop mode
