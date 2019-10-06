@@ -5,6 +5,25 @@
         text-transform: uppercase;
     }
 }
+
+.post_content img, .post_listed img{
+    width: auto;
+    height: auto;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all .5s ease;
+}
+
+.post_content img:hover, .post_listed img:hover{
+    width: auto;
+    height: auto;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    transition: all .5s ease;
+}
+
 .main_title{
     padding: 0 15px;
     h1{
